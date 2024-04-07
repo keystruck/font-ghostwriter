@@ -1,0 +1,2 @@
+# Identify all .ttf files as binary data. See https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#Binary-Files
+*.ttf binary
