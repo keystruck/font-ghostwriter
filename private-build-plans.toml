@@ -1,0 +1,502 @@
+#==============================================================================#
+#                                                                              |
+#  private-build-plans.toml                                                    |
+#  v. 2029-04-02                                                               |
+#                                                                              |
+#  Iosevka custom font build plans for the following fonts:                    |
+#    * Ghostwriter Code (regular and condensed)                                |
+#    * Ghostwriter Type (regular and condensed)                                |
+#    * Ghostwriter Sans Quasi (regular and condensed)                          |
+#                                                                              |
+# Instructions:                                                                |
+#                                                                              |
+# Clone the Iosevka repo locally.  The full repo weighs in at >30GB so limit   |
+# the depth of the clone:                                                      |
+#                                                                              |
+#    git clone --depth 1 https://github.com/be5invis/Iosevka -o iosevka        |
+#    cd iosevka                                                                |
+#    npm install    # install any missing dependencies                         |
+#                                                                              |
+# Copy this file to the repo root directory, then from the root directory      |
+# execute:                                                                     |
+#                                                                              |
+#    git pull                                                                  |
+#    npm install                                                               |
+#    npm run build ttf::GW{Code,Type,SansQuasi}{,Cond}                         |
+#                                                                              |
+# Customizer:  https://typeof.net/Iosevka/customizer                           |
+#                                                                              |
+#==============================================================================#
+
+
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Ghostwriter Code
+# Monospaced sans-serif for terminal and coding
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Ghostwriter Code Regular
+
+[buildPlans.GWCode]
+family = "Ghostwriter Code"
+spacing = "term"
+serifs = "sans"
+noCvSs = false
+exportGlyphNames = false
+
+  [buildPlans.GWCode.variants]
+  inherits = "ss20"
+
+    [buildPlans.GWCode.variants.design]
+    capital-g = "toothed-serifless-hooked"
+    capital-m = "slanted-sides-hanging-motion-serifed"
+    capital-s = "serifless"
+    capital-z = "straight-serifless"
+    a = "double-storey-tailed"
+    c = "serifless"
+    f = "flat-hook-serifless"
+    g = "double-storey"
+    i = "serifed-flat-tailed"
+    k = "curly-serifless"
+    l = "serifed-flat-tailed"
+    r = "hookless-top-serifed"
+    t = "flat-hook"
+    y = "curly-turn-motion-serifed"
+    z = "curly-serifless"
+    long-s = "flat-hook-descending-middle-serifed-xh"
+    eszet = "longs-s-lig-serifless"
+    zero = "slashed"
+    five = "oblique-flat-serifless"
+    seven = "bend-serifless"
+    tilde = "low"
+    asterisk = "penta-low"
+    caret = "medium"
+    number-sign = "slanted"
+    ampersand = "upper-open"
+    at = "threefold"
+    dollar = "open-cap"
+    cent = "open"
+    percent = "rings-continuous-slash"
+    question = "corner"
+
+    [buildPlans.GWCode.variants.italic]
+    capital-z = "straight-serifless-with-horizontal-crossbar"
+    a = "single-storey-earless-corner-tailed"
+    f = "diagonal-tailed"
+    g = "single-storey-serifless"
+    l = "serifed-diagonal-tailed"
+    z = "curly-serifless-with-crossbar"
+    one = "no-base"
+    five = "oblique-flat-serifless"
+    seven = "bend-serifless-crossbar"
+    cent = "open"
+
+[buildPlans.GWCode.widths.Normal]
+shape = 600
+menu = 5
+css = "normal"
+
+[buildPlans.GWCode.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.GWCode.slopes.Italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
+
+
+
+# Ghostwriter Code Condensed
+
+[buildPlans.GWCodeCond]
+family = "Ghostwriter Code Condensed"
+spacing = "term"
+serifs = "sans"
+noCvSs = false
+exportGlyphNames = false
+
+  [buildPlans.GWCodeCond.variants]
+  inherits = "ss20"
+
+    [buildPlans.GWCodeCond.variants.design]
+    capital-g = "toothed-serifless-hooked"
+    capital-m = "slanted-sides-hanging-motion-serifed"
+    capital-s = "serifless"
+    capital-z = "straight-serifless"
+    a = "double-storey-tailed"
+    c = "serifless"
+    f = "flat-hook-serifless"
+    g = "double-storey"
+    i = "serifed-flat-tailed"
+    k = "curly-serifless"
+    l = "serifed-flat-tailed"
+    r = "hookless-top-serifed"
+    t = "flat-hook"
+    y = "curly-turn-motion-serifed"
+    z = "curly-serifless"
+    long-s = "flat-hook-descending-middle-serifed-xh"
+    eszet = "longs-s-lig-serifless"
+    zero = "slashed"
+    five = "oblique-flat-serifless"
+    seven = "bend-serifless"
+    tilde = "low"
+    asterisk = "penta-low"
+    caret = "medium"
+    number-sign = "slanted"
+    ampersand = "upper-open"
+    at = "threefold"
+    dollar = "open-cap"
+    cent = "open"
+    percent = "rings-continuous-slash"
+    question = "corner"
+
+    [buildPlans.GWCodeCond.variants.italic]
+    capital-z = "straight-serifless-with-horizontal-crossbar"
+    a = "single-storey-earless-corner-tailed"
+    f = "diagonal-tailed"
+    g = "single-storey-serifless"
+    l = "serifed-diagonal-tailed"
+    z = "curly-serifless-with-crossbar"
+    one = "no-base"
+    five = "oblique-flat-serifless"
+    seven = "bend-serifless-crossbar"
+    cent = "open"
+
+[buildPlans.GWCodeCond.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+[buildPlans.GWCodeCond.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.GWCodeCond.slopes.Italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
+
+
+
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Ghostwriter Type
+# Monospaced serif for general text use
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Ghostwriter Type Regular
+
+[buildPlans.GWType]
+family = "Ghostwriter Type"
+spacing = "fixed"
+serifs = "slab"
+noCvSs = false
+exportGlyphNames = false
+
+  [buildPlans.GWType.variants]
+  inherits = "ss20"
+
+    [buildPlans.GWType.variants.design]
+    capital-g = "toothed-serifless-hooked"
+    capital-m = "slanted-sides-hanging-motion-serifed"
+    capital-s = "bilateral-serifed"
+    capital-z = "curly-serifed"
+    a = "double-storey-serifed"
+    c = "serifless"
+    f = "serifed"
+    g = "double-storey"
+    i = "serifed"
+    k = "straight-top-left-and-bottom-right-serifed"
+    l = "serifed"
+    r = "compact-serifed"
+    t = "flat-hook"
+    y = "curly-serifed"
+    z = "curly-serifed"
+    long-s = "bent-hook-double-serifed"
+    eszet = "longs-s-lig-middle-serifed"
+    zero = "oval-unslashed"
+    three = "two-arcs"
+    five = "oblique-flat-serifed"
+    seven = "bend-serifed"
+    tilde = "low"
+    asterisk = "penta-high"
+    caret = "medium"
+    number-sign = "slanted"
+    ampersand = "closed"
+    at = "threefold"
+    dollar = "open"
+    cent = "open"
+    percent = "rings-continuous-slash"
+    question = "smooth"
+
+    [buildPlans.GWType.variants.italic]
+    a = "single-storey-earless-corner-tailed"
+    f = "tailed"
+    g = "single-storey-flat-hook-serifless"
+    i = "serifed-diagonal-tailed"
+    l = "serifed-diagonal-tailed"
+    zero = "oval-slashed"
+    one = "no-base"
+    five = "oblique-flat-serifed"
+    seven = "bend-serifed-crossbar"
+    tilde = "low"
+    asterisk = "penta-low"
+    caret = "low"
+
+[buildPlans.GWType.widths.Normal]
+shape = 600
+menu = 5
+css = "normal"
+
+[buildPlans.GWType.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.GWType.slopes.Italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
+
+
+
+# Ghostwriter Type Condensed
+
+[buildPlans.GWTypeCond]
+family = "Ghostwriter Type Condensed"
+spacing = "fixed"
+serifs = "slab"
+noCvSs = false
+exportGlyphNames = false
+
+  [buildPlans.GWTypeCond.variants]
+  inherits = "ss20"
+
+    [buildPlans.GWTypeCond.variants.design]
+    capital-g = "toothed-serifless-hooked"
+    capital-m = "slanted-sides-hanging-motion-serifed"
+    capital-s = "bilateral-serifed"
+    capital-z = "curly-serifed"
+    a = "double-storey-serifed"
+    c = "serifless"
+    f = "serifed"
+    g = "double-storey"
+    i = "serifed"
+    k = "straight-top-left-and-bottom-right-serifed"
+    l = "serifed"
+    r = "compact-serifed"
+    t = "flat-hook"
+    y = "curly-serifed"
+    z = "curly-serifed"
+    long-s = "bent-hook-double-serifed"
+    eszet = "longs-s-lig-middle-serifed"
+    zero = "oval-unslashed"
+    three = "two-arcs"
+    five = "oblique-flat-serifed"
+    seven = "bend-serifed"
+    tilde = "low"
+    asterisk = "penta-high"
+    caret = "medium"
+    number-sign = "slanted"
+    ampersand = "closed"
+    at = "threefold"
+    dollar = "open"
+    cent = "open"
+    percent = "rings-continuous-slash"
+    question = "smooth"
+
+    [buildPlans.GWTypeCond.variants.italic]
+    a = "single-storey-earless-corner-tailed"
+    f = "tailed"
+    g = "single-storey-flat-hook-serifless"
+    i = "serifed-diagonal-tailed"
+    l = "serifed-diagonal-tailed"
+    zero = "oval-slashed"
+    one = "no-base"
+    five = "oblique-flat-serifed"
+    seven = "bend-serifed-crossbar"
+    tilde = "low"
+    asterisk = "penta-low"
+    caret = "low"
+
+[buildPlans.GWTypeCond.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+[buildPlans.GWTypeCond.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.GWTypeCond.slopes.Italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
+
+
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Ghostwriter Sans Quasi
+# Quasiproportional sans-serif for general text use
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Ghostwriter Sans Quasi Regular
+
+[buildPlans.GWSansQuasi]
+family = "Ghostwriter Sans Quasi"
+spacing = "quasi-proportional"
+serifs = "sans"
+noCvSs = false
+exportGlyphNames = false
+noLigation = true
+
+  [buildPlans.GWSansQuasi.variants]
+  inherits = "ss20"
+
+    [buildPlans.GWSansQuasi.variants.design]
+    capital-g = "toothed-serifless-hooked"
+    capital-m = "slanted-sides-hanging-motion-serifed"
+    capital-s = "serifless"
+    capital-z = "straight-serifless"
+    a = "double-storey-tailed"
+    c = "serifless"
+    f = "serifless"
+    g = "double-storey"
+    i = "serifed-flat-tailed"
+    k = "curly-serifless"
+    l = "serifed-flat-tailed"
+    r = "hookless-top-serifed"
+    t = "flat-hook"
+    y = "curly-turn-motion-serifed"
+    z = "curly-serifless"
+    long-s = "bent-hook-descending-middle-serifed"
+    eszet = "longs-s-lig-serifless"
+    zero = "slashed"
+    five = "oblique-flat-serifless"
+    seven = "bend-serifless"
+    tilde = "low"
+    asterisk = "penta-low"
+    caret = "medium"
+    number-sign = "slanted"
+    ampersand = "upper-open"
+    at = "threefold"
+    dollar = "open-cap"
+    cent = "open"
+    percent = "rings-continuous-slash"
+    question = "corner"
+
+    [buildPlans.GWSansQuasi.variants.italic]
+    capital-z = "straight-serifless-with-horizontal-crossbar"
+    a = "single-storey-earless-corner-tailed"
+    f = "tailed"
+    g = "single-storey-serifless"
+    l = "serifed-flat-tailed"
+    z = "curly-serifless-with-crossbar"
+    one = "no-base"
+    five = "oblique-flat-serifless"
+    seven = "bend-serifless-crossbar"
+    cent = "open"
+
+[buildPlans.GWSansQuasi.widths.Normal]
+shape = 600
+menu = 5
+css = "normal"
+
+[buildPlans.GWSansQuasi.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.GWSansQuasi.slopes.Italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
+
+
+# Ghostwriter Sans Quasi Condensed
+
+[buildPlans.GWSansQuasiCond]
+family = "Ghostwriter Sans Quasi Cond"
+spacing = "quasi-proportional"
+serifs = "sans"
+noCvSs = false
+exportGlyphNames = false
+noLigation = true
+
+  [buildPlans.GWSansQuasiCond.variants]
+  inherits = "ss20"
+
+    [buildPlans.GWSansQuasiCond.variants.design]
+    capital-g = "toothed-serifless-hooked"
+    capital-m = "slanted-sides-hanging-motion-serifed"
+    capital-s = "serifless"
+    capital-z = "straight-serifless"
+    a = "double-storey-tailed"
+    c = "serifless"
+    f = "serifless"
+    g = "double-storey"
+    i = "serifed-flat-tailed"
+    k = "curly-serifless"
+    l = "serifed-flat-tailed"
+    r = "hookless-top-serifed"
+    t = "flat-hook"
+    y = "curly-turn-motion-serifed"
+    z = "curly-serifless"
+    long-s = "bent-hook-descending-middle-serifed"
+    eszet = "longs-s-lig-serifless"
+    zero = "slashed"
+    five = "oblique-flat-serifless"
+    seven = "bend-serifless"
+    tilde = "low"
+    asterisk = "penta-low"
+    caret = "medium"
+    number-sign = "slanted"
+    ampersand = "upper-open"
+    at = "threefold"
+    dollar = "open-cap"
+    cent = "open"
+    percent = "rings-continuous-slash"
+    question = "corner"
+
+    [buildPlans.GWSansQuasiCond.variants.italic]
+    capital-z = "straight-serifless-with-horizontal-crossbar"
+    a = "single-storey-earless-corner-tailed"
+    f = "tailed"
+    g = "single-storey-serifless"
+    l = "serifed-flat-tailed"
+    z = "curly-serifless-with-crossbar"
+    one = "no-base"
+    five = "oblique-flat-serifless"
+    seven = "bend-serifless-crossbar"
+    cent = "open"
+
+[buildPlans.GWSansQuasiCond.widths.Normal]
+shape = 500
+menu = 5
+css = "normal"
+
+[buildPlans.GWSansQuasiCond.slopes.Upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.GWSansQuasiCond.slopes.Italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
