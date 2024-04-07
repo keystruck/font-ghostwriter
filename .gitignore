@@ -1,0 +1,8 @@
+# Help with .gitignore syntax: https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+# OS files
+**/.DS_Store
+
+# emacs internal files
+**/\#*\#
+**/*~
